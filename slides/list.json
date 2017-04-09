@@ -35,6 +35,9 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
         "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/plain-php.html"
     },
+
+    "from-helpers-to-middleware/dark-ages-of-plain-php/we-did-it-anyway.html",
+
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
         "path":       null
