@@ -22,6 +22,7 @@
         "background": "slides/from-helpers-to-middleware/our-application/acme-inc-services.png",
         "path":       null
     },
+    "from-helpers-to-middleware/our-application/services-provided.html",
 
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
