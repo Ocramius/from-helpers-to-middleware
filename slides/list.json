@@ -8,6 +8,17 @@
     "introduction/i-work-for-roave.html",
     "introduction/i-work-on-zend-framework.html",
     "introduction/i-work-on-doctrine.html",
+
+    "from-helpers-to-middleware/our-application/the-domain.html",
+    {
+        "background": "slides/from-helpers-to-middleware/our-application/coyote-roadrunner.png",
+        "path":       null
+    },
+    {
+        "background": "slides/from-helpers-to-middleware/our-application/acme-inc.jpg",
+        "path":       null
+    },
+
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
         "path":       null
