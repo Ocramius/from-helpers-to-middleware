@@ -9,6 +9,14 @@
     "introduction/i-work-on-zend-framework.html",
     "introduction/i-work-on-doctrine.html",
     {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
+        "path":       null
+    },
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
+        "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/plain-php.html"
+    },
+    {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
         "path":       null
     },
