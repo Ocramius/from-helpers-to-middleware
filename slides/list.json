@@ -11,10 +11,6 @@
 
     "from-helpers-to-middleware/our-application/the-domain.html",
     {
-        "background": "slides/from-helpers-to-middleware/our-application/coyote-roadrunner.png",
-        "path":       null
-    },
-    {
         "background": "slides/from-helpers-to-middleware/our-application/acme-inc.jpg",
         "path":       null
     },
@@ -22,9 +18,14 @@
         "background": "slides/from-helpers-to-middleware/our-application/acme-inc-services.png",
         "path":       null
     },
+    {
+        "background": "slides/from-helpers-to-middleware/our-application/coyote-roadrunner.png",
+        "path":       null
+    },
     "from-helpers-to-middleware/our-application/services-provided.html",
-
     "from-helpers-to-middleware/our-application/requirements.html",
+
+
 
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
