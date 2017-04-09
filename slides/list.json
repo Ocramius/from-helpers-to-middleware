@@ -18,6 +18,10 @@
         "background": "slides/from-helpers-to-middleware/our-application/acme-inc.jpg",
         "path":       null
     },
+    {
+        "background": "slides/from-helpers-to-middleware/our-application/acme-inc-services.png",
+        "path":       null
+    },
 
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
