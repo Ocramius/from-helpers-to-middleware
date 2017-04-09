@@ -8,6 +8,14 @@
     "introduction/i-work-for-roave.html",
     "introduction/i-work-on-zend-framework.html",
     "introduction/i-work-on-doctrine.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
+        "path":       null
+    },
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
+        "path":       "from-helpers-to-middleware/dark-ages-of-zf1/zf1.html"
+    },
 
     "outro/thanks.html"
 ]
