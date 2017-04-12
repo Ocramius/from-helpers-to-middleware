@@ -43,7 +43,10 @@
     "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-1.html",
     "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-2.html",
     "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-3.html",
-
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.jpg",
+        "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.html"
+    },
 
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
