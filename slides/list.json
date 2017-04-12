@@ -62,6 +62,8 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
         "path":       "from-helpers-to-middleware/dark-ages-of-zf1/zf1.html"
     },
+    "from-helpers-to-middleware/dark-ages-of-zf1/migrate-all-the-things.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/we-now-have-separation.html",
 
 
     "outro/thanks.html"
