@@ -105,7 +105,9 @@
     "from-helpers-to-middleware/zf2-and-decent-patterns/we-still-type-hint-against-the-framework.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/we-are-mostly-doing-http-stuff.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/if-we-abstract-to-listeners-we-introduce-magic.html",
+
     "from-helpers-to-middleware/middleware/introducing-middleware.html",
+    "from-helpers-to-middleware/middleware/a-solid-standard.html",
 
     "outro/thanks.html"
 ]
