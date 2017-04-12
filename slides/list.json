@@ -118,6 +118,7 @@
     },
     "from-helpers-to-middleware/middleware/orthogonal-concerns.html",
     "from-helpers-to-middleware/middleware/an-example-pipeline.html",
+    "from-helpers-to-middleware/middleware/an-example-pipeline-graph.html",
 
     "outro/thanks.html"
 ]
