@@ -125,6 +125,7 @@
     "from-helpers-to-middleware/middleware/NotAllowed.html",
     "from-helpers-to-middleware/middleware/ValidatePurchase.html",
     "from-helpers-to-middleware/middleware/FormValidationError.html",
+    "from-helpers-to-middleware/middleware/PurchaseProduct.html",
 
     "outro/thanks.html"
 ]
