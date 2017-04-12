@@ -132,5 +132,10 @@
         "path":       "from-helpers-to-middleware/middleware/warning-type-system-workarounds.html"
     },
 
-    "outro/thanks.html"
+    "outro/thanks.html",
+
+    "from-helpers-to-middleware/bonus-cqrs-and-middleware/middleware-with-cqrs.html",
+    "from-helpers-to-middleware/bonus-cqrs-and-middleware/middleware-with-cqrs-graph.html"
+
+
 ]

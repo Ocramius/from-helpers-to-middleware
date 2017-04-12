@@ -1,4 +1,7 @@
 digraph App {
+    size="6,6";
+    #rankdir="LR";
+
     NegotiateRequestContent -> ParseRequestBody
     ParseRequestBody -> Routing
     Routing -> NotFound
