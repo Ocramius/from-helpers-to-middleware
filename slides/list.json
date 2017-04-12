@@ -127,6 +127,10 @@
     "from-helpers-to-middleware/middleware/FormValidationError.html",
     "from-helpers-to-middleware/middleware/PurchaseProduct.html",
     "from-helpers-to-middleware/middleware/simplification-through-decomposition.html",
+    {
+        "background": "slides/from-helpers-to-middleware/middleware/black.png",
+        "path":       "from-helpers-to-middleware/middleware/warning-type-system-workarounds.html"
+    },
 
     "outro/thanks.html"
 ]
