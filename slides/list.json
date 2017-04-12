@@ -117,6 +117,7 @@
         "path":       "from-helpers-to-middleware/middleware/http-middleworld.html"
     },
     "from-helpers-to-middleware/middleware/orthogonal-concerns.html",
+    "from-helpers-to-middleware/middleware/an-example-pipeline.html",
 
     "outro/thanks.html"
 ]
