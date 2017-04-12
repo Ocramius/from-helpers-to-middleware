@@ -2,9 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Extremely Defensive PHP</title>
+        <title>From Helpers to Middleware</title>
 
-        <meta name="description" content="Extremely Defensive PHP">
+        <meta
+            name="description"
+            content="How PHP HTTP applications evolved, plain code, frameworks, helpers, dependency injection, PSR-15 middleware"
+        />
         <meta name="author" content="Marco Pivetta">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -99,7 +102,1114 @@
                     
                 
                     
+                        <section><h2>
+    The <span class="php-color">Domain</span>
+</h2>
+
+<p class="fragment">
+    The year is
+    <strong>2004</strong>.
+</p>
+
+<p class="fragment">
+    A new client approaches us with a software project to be built.
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/our-application/acme-inc.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/our-application/acme-inc-services.png" ></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/our-application/coyote-roadrunner.png" ></section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    Our
+    <span class="php-color">Services</span>
+</h2>
+
+<p class="fragment">
+    The best you can find, according to
+    <strong>2004</strong>
+    standards!
+</p>
+
+<ul>
+    <li class="fragment">
+        <span class="doctrine-color">Top-grade</span>
+        <span class="zf-color">Weaponry</span>
+    </li>
+    <li class="fragment">
+        Exclusively to
+        <span class="zf-color">Coyotes</span>
+    </li>
+    <li class="fragment">
+        Express
+        <span class="zf-color">Delivery</span>
+    </li>
+    <li class="fragment">
+        No
+        <span class="zf-color">Refunds</span>
+    </li>
+</ul>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2 class="zf-color">Requirements</h2>
+
+<ul>
+    <li class="fragment">
+        <span class="php-color">E-Commerce</span>
+        Platform
+    </li>
+    <li class="fragment">
+        <span class="php-color">
+            <span class="doctrine-color">Coyotes</span>
+            can
+            <span class="php-color">purchase</span>
+        </span>
+    </li>
+</ul>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png" ></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png" ><h1>
+    <span class="php-color">Plain PHP</span>
+</h1>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h1>
+    We did it anyway!
+</h1>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png" ><h1 style="color: red;">WARNING</h1>
+
+<p style="color: white;">
+    The following content may contain elements
+    that are not suitable for some audiences.
+</p>
+
+<p style="color: white;">
+    Accordingly, viewer discretion is advised
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+&lt;?php
+
+include 'functions.php.inc';
+
+// register_globals polyfill
+foreach ($_REQUEST as $var => $value) {
+    $$var = $value;
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+if ($type == 'purchase' && $userType == 'coyote') {
+    $products = mysql_query(
+        'SELECT * FROM product WHERE id = ' . $productId
+    );
+
+    if ($product = mysql_fetch_assoc($products)) {
+        if ($purchase && strlen($creditCard) == 16) {
+            $success = true;
+            mysql_query(
+                'INSERT INTO purchase (product_id, credit_card, user)
+                VALUES (' . $productId . ', "' . $creditCard . '", "' . $user . '")'
+            );
+            mail(
+                $userEmail,
+                'Purchase completed',
+                'Thank you for your purchase!'
+            );
+        }
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+include 'header.php';
+
+if (isset($success)) {
+    echo "&lt;h3&gt;Thank you for your purchase, $user!&lt;/h3&gt;";
+}
+
+include 'product-details.php';
+include 'footer.php';
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.jpg" ><h2><span class="zf-color">
+    IT COULD WORK
+</span></h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="php-color">Security Issues</span>
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/security-issues-workarounds.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/no-idea-what-we-re-doing.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-plain-php/customer-state-after-security-issue.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    Let's get some
+    <br/>
+    <span class="zf-color">frameworks</span>
+    <br/>
+    involved
+</h2>
+
+<p class="fragment">
+    At least these people know what they're doing...
+</p>
+
+<p class="fragment">
+    (sometimes)
+</p></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png" ><h1>
+    <span class="zf-color">ZF</span>
+    <span class="doctrine-color">1.x</span>
+</h1>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    Migrate
+    <br/>
+    <span class="zf-color">all the things!</span>
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    Things are <span class="doctrine-color">separated</span>!
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h1><abbr title="Model, View, Controller" class="zf-color">MVC</abbr></h1>
+
+<p class="fragment">(-ish)</p></section>
+
+                    
+                    
+                
+                    
+                        <section><h2><span class="zf-color">Controller</span></h2>
+
+<p class="fragment">(code is made up)</p>
+<p class="fragment">(I <abbr title="can't be arsed">CBA</abbr> to look up old ZF1 code)</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+&lt;?php
+
+class PurchaseController extends Zend_Controller_Action
+{
+    public function purchaseAction()
+    {
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+if (! $this->isCoyote()) {
+    return $this->notAllowed();
+}
+
+$form = new PurchaseForm();
+
+if (! $form->isValid($this->getPost())) {
+    return $this->render(['form' => $form]);
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+
+$data = $form->getData();
+
+$product = $this->loadProduct($data['product']);
+$product->purchase(); // magic
+
+$this->mail($this->user(), 'Purchase completed');
+
+return $this->render(['success' => true]);
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2><span class="zf-color">PROGRESS!</span></h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    No more basic
+    <br/>
+    <span class="doctrine-color">Security Issues</span>
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><ul>
+    <li class="fragment">
+        Rendering in
+        <span class="zf-color">views</span>,
+        assuming escaping,
+        fixes
+        <span class="doctrine-color">XSS</span>
+    </li>
+    <li class="fragment">
+        Proper, unavoidable
+        <span class="zf-color">form validation</span>
+    </li>
+    <li class="fragment">
+        <span class="zf-color">Form validation</span>
+        with
+        <span class="doctrine-color">CSRF protection</span>
+    </li>
+    <li class="fragment">
+        <span class="zf-color">SQL abstraction</span>
+        removed
+        <span class="doctrine-color">SQL injections</span>
+    </li>
+    <li class="fragment">
+        <span class="zf-color">Mailer</span>
+        removed
+        <span class="doctrine-color">SMTP header injection</span>
+    </li>
+</ul>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="doctrine-color">Testability</span>
+</h2>
+
+<p class="fragment">(in theory)</p>
+<p class="fragment">
+    Anybody tested a
+    <abbr class="zf-color" title="Zend Framework 1">ZF1</abbr>
+    controller?
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-zf1/zf1-testability-in-practice.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="php-color">Coupling</span>
+    <br/>
+    with the
+    <br/>
+    <span class="zf-color">Framework</span>
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><p>
+    Everything
+    <span class="php-color">extends</span>
+    from it
+</p>
+<p class="fragment">
+    Everything
+    <span class="php-color">consumes</span>
+    its types
+</p>
+<p class="fragment">
+    Everything talks to a
+    <span class="php-color">singleton</span>
+    kernel
+</p>
+<p class="fragment">
+    All
+    <span class="zf-color">plugins</span>
+    and
+    <span class="zf-color">helpers</span>
+    have a
+    <span class="php-color">0-argument-constructor</span>
+</p>
+<p class="fragment">
+    <span class="zf-color">Zend_Loader</span>
+    used as a
+    <span class="php-color">lazy-loading</span>
+    mechanism
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/dark-ages-of-zf1/you-see-it-coming.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section><h1><span class="zf-color">ZF2</span></h1>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h1>
+    <span class="php-color">Rewrite</span>
+</h1></section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/zf2-and-decent-patterns/confused-coyote.jpg" ></section>
+
+                    
+                    
+                
+                    
+                        <section><p>
+    It's gonna be a rewrite
+</p>
+
+<p class="fragment">
+    You saw it coming!
+</p>
+
+<p class="fragment">
+    ... ok, we all didn't.
+</p>
+
+<p class="fragment">
+    We didn't know any better!
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h1>The <span class="zf-color">Controller</span></h1>
+
+<p class="fragment">
+    ... after many iterations of spit and polish ...
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+&lt;?php
+
+namespace App;
+
+use Zend\Mvc\Controller\AbstractActionController;
+use App\Helper\IsCoyote;
+use App\Helper\NotAllowed;
+use App\Helper\PurchaseForm;
+use App\Helper\GetProduct;
+use App\Helper\Notifications;
+use App\Helper\CurrentUser;
+
+class PurchaseController extends AbstractActionController
+{
+    // private properties
+</code></pre>
+
+<p class="fragment">Namespaces! Imports! We know what we use! Hooray!</p></section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+public function __construct(
+    IsCoyote $isCoyote,
+    NotAllowed $notAllowed,
+    PurchaseForm $form,
+    GetProduct $getProduct,
+    CurrentUser $currentUser,
+    Notifications $notifications
+) {
+    $this->isCoyote = $isCoyote;
+    $this->notAllowed = $notAllowed;
+    $this->form = $form;
+    $this->getProduct = $getProduct;
+    $this->currentUser = $currentUser;
+    $this->notifications = $notifications;
+}
+</code></pre>
+
+<p class="fragment">Constructor injection!</p>
+<p class="fragment">NO HORRIBLE MAGIC SINGLETON LOOPS!</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+public function purchaseAction()
+{
+    $request = $this->getRequest(); // magic mvc stuff :-(
+
+    if (! $this->isCoyote->isCoyote($request)) {
+        return $this->notAllowed->notAllowed($request);
+    }
+
+    $this->form->setData($request->getPost());
+
+    if (! $this->form->isValid($this->getPost())) {
+        return ['form' => $this->form];
+    }
+</code></pre>
+
+<p class="fragment">Removed all magic <code>__call</code>-based helpers</p>
+<p class="fragment">
+    Still rely on <code>Zend\Mvc</code> lifecycle magic
+</p>
+<p class="fragment">
+    Still rely on <code>Zend\Stdlib\RequestInterface</code>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+$data = $this->form->getData();
+
+$product = $this->getProduct->get($data['product']);
+$product->purchase(); // magic
+
+$this->notifications->notify(
+    $this->currentUser->get($request),
+    'Purchase completed'
+);
+
+return ['success' => true];
+}
+</code></pre>
+
+<p class="fragment">Still some magic in the domain - let's skip that for now</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>Reduced framework coupling</h2>
+
+<p class="fragment">
+    Our classes don't
+    <span class="doctrine-color">extend</span>
+    from the framework anymore.
+</p>
+
+<p class="fragment">
+    We have a clean
+    <abbr title="Dependency Injection" class="zf-color">DI</abbr>
+    graph
+</p>
+
+<p class="fragment">
+    We still have the benefits of
+    <span class="zf-color">lazy loading</span>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="doctrine-color">Less Magic</span> = <span class="zf-color">Less Code Rot</span>
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    We still
+    <span class="php-color">type-hint</span>
+    against
+    <span class="zf-color">framework code</span>
+</h2>
+
+<p class="fragment">
+    Specifically, for the HTTP request
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    We are mostly doing
+    <br/>
+    <span class="php-color">HTTP</span>
+    <br/>
+    stuff
+</h2>
+
+<p class="fragment">
+    (that's what controllers were meant for)
+</p></section>
+
+                    
+                    
+                
+                    
+                        <section><h3>
+    If we abstract into
+    <br/>
+    <span class="zf-color">listeners</span>
+    <br/>
+    we add
+    <br/>
+    <span class="php-color">framework magic</span>
+</h3>
+
+<p class="fragment">... and <span class="php-color">framework coupling</span></p></section>
+
+                    
+                    
+                
+                    
+                        <section><h1>
+    <span class="zf-color">Middleware</span>
+</h1></section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    Solid <span class="zf-color">specification</span>
+</h2>
+
+<p class="fragment">
+    Based on
+    <a href="http://www.php-fig.org/psr/psr-7/" target="_blank">PSR-7</a>
+    and
+    <a
+        href="https://github.com/php-fig/fig-standards/blob/10bb43b1802c0427f8a4a5d1e6a84da83fa7724d/proposed/http-middleware/middleware.md"
+        target="_blank"
+    >PSR-15</a>
+</p>
+
+<p class="fragment">
+    Still developed by the
+    <a href="https://github.com/weierophinney/" target="_blank">friendly framework folks</a>
+    that brought you
+    <abbr title="Zend Framework 1" class="zf-color">ZF1</abbr>
+    and
+    <abbr title="Zend Framework 2" class="zf-color">ZF2</abbr>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h3>
+    <span class="zf-color">PSR-7</span>
+</h3>
+
+<p class="fragment">
+    Immutable representation of HTTP messages and server-side HTTP messages.
+</p>
+
+<pre class="fragment"><code data-trim>
+namespace Psr\Http\Message;
+
+interface MessageInterface ...
+interface RequestInterface ...
+interface ServerRequestInterface ...
+interface ResponseInterface ...
+interface UploadedFileInterface ...
+interface UriInterface ...
+interface StreamInterface ...
+</code></pre></section>
+
+                    
+                    
+                
+                    
+                        <section><h3>
+    <span class="zf-color">PSR-15</span>
+</h3>
+
+<pre class="fragment"><code data-trim>
+namespace Psr\Http\ServerMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+
+interface MiddlewareInterface {
+    public function process(
+        ServerRequestInterface $request,
+        DelegateInterface $delegate
+    ) : ResponseInterface;
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+namespace Psr\Http\ServerMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+
+interface DelegateInterface {
+    public function process(
+        ServerRequestInterface $request
+    ) : ResponseInterface;
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    No more
+    <br/>
+    <span class="php-color">framework coupling</span>!
+</h2>
+
+<p class="fragment">
+    These standards will outlive the current frameworks
+</p>
+
+<p class="fragment">
+    Simple abstractions, just interfaces
+</p>
+
+<p class="fragment">
+    Bring your own implementation
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    What can you <span class="doctrine-color">do</span> with it?
+</h2>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/middleware/middleware-example-flight.png" ><p>
+    <a href="http://www.php-middleworld.com/" target="_blank">
+        http://www.php-middleworld.com/
+    </a>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="doctrine-color">Orthogonal</span> <span class="zf-color">concerns</span>
+</h2>
+
+<p class="fragment">
+    Solved with
+    <span class="zf-color">function composition</span>,
+    not with
+    <span class="php-color">magic</span>!
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h3>
+    An example
+    <span class="zf-color">middleware</span>
+    <span class="doctrine-color">pipeline</span>
+</h3>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><img src="examples/middleware/purchase-pipeline.svg"/></section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class NotFound implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse('Not Found', 404);
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class InitializeSession implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return $delegate->process(
+            $request->withAttribute(
+                'session',
+                $this->loadSession($request)
+            )
+        );
+    }
+
+    private function loadSession(ServerRequestInterface $request) : array
+    {
+        // ...
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class IsCoyote implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        if (! $this->isCoyote($request)) {
+            return $this->notAllowed->process($request, $delegate);
+        }
+
+        return $delegate->process($request);
+    }
+
+    private function isCoyote(ServerRequestInterface $request) : bool
+    {
+        // ...
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class NotAllowed implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse('You are not allowed here', 403);
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class ValidatePurchase implements MiddlewareInterface
+{
+  // ...
+  public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+  {
+    $validationResult = $this->form->validate($request);
+    $request = $request->withAttribute(
+      'validationResult',
+      $validationResult
+    );
+
+    if (! $validationResult->isValid()) {
+      return $this->validationError->process($request, $delegate);
+    }
+
+    return $delegate->process($request, $delegate);
+  }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class FormValidationError implements MiddlewareInterface
+{
+    private $renderer;
+
+    public function __construct(Renderer $renderer)
+    {
+        $this->renderer = $renderer;
+    }
+
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->renderer->render(
+                'validation-error',
+                ['result' => $request->getAttribute('validationResult')]
+            ),
+            422
+        );
+    }
+}
+</code></pre></section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+final class PurchaseProduct implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        $this->getProduct->get(
+            $request->getAttribute('validationResult')->get('product')
+        );
+
+        $product->purchase(); // still magic - not for this talk
+
+        $this->notifications->notify(
+            $request->getAttribute('session')['user'],
+            'Purchase completed'
+        );
+
+        return new HtmlResponse($this->renderer->render(
+            'product-purchased',
+            ['product' => $product]
+        ));
+    }
+}
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    <span class="zf-color">Simplification</span> through <span class="doctrine-color">decomposition</span>
+</h2>
+
+<p class="fragment">
+    Each middleware is <span class="zf-color">ludicrously simple</span>
+</p>
+
+<p class="fragment">
+    Each middleware handles <span class="zf-color">orthogonal concerns</span>
+</p>
+
+<p class="fragment">
+    Easy to <span class="zf-color">test</span>
+</p>
+
+<p class="fragment">
+    Easy to <span class="doctrine-color">re-arrange</span>
+</p>
+
+<p class="fragment">
+    Easy to <span class="doctrine-color">delete</span> and <span class="php-color">replace</span>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section data-background="slides/from-helpers-to-middleware/middleware/black.png" ><h1 style="color: red;">WARNING</h1>
+
+<p style="color: white;">
+    <code>ServerRequestInterface#withAttribute()</code>
+    and
+    <code>ServerRequestInterface#getAttribute()</code>
+    are hacks, and aren't type-safe. Use with care!
+</p>
+</section>
+
+                    
+                    
+                
+                    
                         <section><h1><strong>Thanks!</strong></h1>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>
+    What if we combine
+    <br/>
+    <span class="doctrine-color">CQRS</span> with <span class="zf-color">Middleware</span>?
+</h2>
+
+<p class="fragment">
+    <span class="zf-color">Middleware</span> does only <span class="php-color">HTTP</span>.
+</p>
+
+<p class="fragment">
+    <span class="doctrine-color">Command Bus</span> does all the <span class="php-color">Business Logic</span>.
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><img src="slides/from-helpers-to-middleware/bonus-cqrs-and-middleware/purchase-pipeline-cqrs.svg" style="height: 800px;"/>
 </section>
 
                     
