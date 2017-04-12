@@ -77,11 +77,12 @@
     "from-helpers-to-middleware/dark-ages-of-zf1/no-more-basic-security-issues.html",
     "from-helpers-to-middleware/dark-ages-of-zf1/security-issues-nailed.html",
     "from-helpers-to-middleware/dark-ages-of-zf1/theoretical-testability.html",
-
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/zf1-testability-in-practice.jpg",
         "path":       null
     },
+    "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework-details.html",
 
     "outro/thanks.html"
 ]
