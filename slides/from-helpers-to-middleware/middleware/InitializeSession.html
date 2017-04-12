@@ -1,0 +1,19 @@
+<pre><code data-trim>
+final class InitializeSession implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return $delegate->process(
+            $request->withAttribute(
+                'session',
+                $this->loadSession($request)
+            )
+        );
+    }
+
+    private function loadSession(ServerRequestInterface $request) : array
+    {
+        // ...
+    }
+}
+</code></pre>

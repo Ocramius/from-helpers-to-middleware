@@ -1,0 +1,9 @@
+<pre><code data-trim>
+final class NotFound implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse('Not Found', 404);
+    }
+}
+</code></pre>

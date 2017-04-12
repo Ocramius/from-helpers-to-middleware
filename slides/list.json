@@ -119,6 +119,11 @@
     "from-helpers-to-middleware/middleware/orthogonal-concerns.html",
     "from-helpers-to-middleware/middleware/an-example-pipeline.html",
     "from-helpers-to-middleware/middleware/an-example-pipeline-graph.html",
+    "from-helpers-to-middleware/middleware/NotFound.html",
+    "from-helpers-to-middleware/middleware/InitializeSession.html",
+    "from-helpers-to-middleware/middleware/IsCoyote.html",
+    "from-helpers-to-middleware/middleware/NotAllowed.html",
+    "from-helpers-to-middleware/middleware/ValidatePurchase.html",
 
     "outro/thanks.html"
 ]
