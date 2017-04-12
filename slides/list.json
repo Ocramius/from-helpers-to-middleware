@@ -52,7 +52,10 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/security-issues-workarounds.jpg",
         "path":       null
     },
-
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/no-idea-what-we-re-doing.jpg",
+        "path":       null
+    },
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
         "path":       null
