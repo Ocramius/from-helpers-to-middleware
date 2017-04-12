@@ -1,0 +1,23 @@
+<pre><code data-trim>
+public function purchaseAction()
+{
+    $request = $this->getRequest(); // magic mvc stuff :-(
+
+    if (! $this->isCoyote->isCoyote($request)) {
+        return $this->notAllowed->notAllowed($request);
+    }
+
+    $this->form->setData($request->getPost());
+
+    if (! $this->form->isValid($this->getPost())) {
+        return ['form' => $this->form];
+    }
+</code></pre>
+
+<p class="fragment">Removed all magic <code>__call</code>-based helpers</p>
+<p class="fragment">
+    Still rely on <code>Zend\Mvc</code> lifecycle magic
+</p>
+<p class="fragment">
+    Still rely on <code>Zend\Stdlib\RequestInterface</code>
+</p>
