@@ -1,6 +1,6 @@
 digraph App {
-    RoutingMiddleware -> NotFoundMiddleware
-    RoutingMiddleware -> IsCoyote
+    Routing -> NotFound
+    Routing -> IsCoyote
     IsCoyote -> NotAllowed
     IsCoyote -> ValidatePurchase
     ValidatePurchase -> FormValidationError
