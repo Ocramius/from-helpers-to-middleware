@@ -56,6 +56,10 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/no-idea-what-we-re-doing.jpg",
         "path":       null
     },
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/customer-state-after-security-issue.jpg",
+        "path":       null
+    },
     "from-helpers-to-middleware/dark-ages-of-plain-php/let-s-get-some-frameworks-involved.html",
 
     {
