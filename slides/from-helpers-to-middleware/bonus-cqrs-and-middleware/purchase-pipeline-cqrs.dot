@@ -1,0 +1,14 @@
+digraph App {
+    NegotiateRequestContent -> ParseRequestBody
+    ParseRequestBody -> Routing
+    Routing -> NotFound
+    Routing -> AcceptOnlyPost
+    AcceptOnlyPost -> ApiThrottling
+    AcceptOnlyPost -> MethodNotSupported
+    ApiThrottling -> InitializeSession
+    InitializeSession -> ValidatePurchaseAsCommand [ label="only this bit changes across all POST interactions" ]
+    ValidatePurchaseAsCommand -> FormValidationError
+    ValidatePurchaseAsCommand -> FireCommand
+    FireCommand -> RespondWithAnAcceptedStatusCode
+    RespondWithAnAcceptedStatusCode -> RedirectToParentResource
+}
