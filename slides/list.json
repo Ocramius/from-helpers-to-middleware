@@ -56,14 +56,13 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/no-idea-what-we-re-doing.jpg",
         "path":       null
     },
-    {
-        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
-        "path":       null
-    },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/let-s-get-some-frameworks-involved.html",
+
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
         "path":       "from-helpers-to-middleware/dark-ages-of-zf1/zf1.html"
     },
+
 
     "outro/thanks.html"
 ]
