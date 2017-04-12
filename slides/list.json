@@ -47,6 +47,11 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.jpg",
         "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.html"
     },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/security-issues.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/security-issues-workarounds.jpg",
+        "path":       null
+    },
 
     {
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
