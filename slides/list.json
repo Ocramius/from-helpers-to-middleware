@@ -83,6 +83,10 @@
     },
     "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework.html",
     "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework-details.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/you-see-it-coming.jpg",
+        "path":       null
+    },
 
     "outro/thanks.html"
 ]
