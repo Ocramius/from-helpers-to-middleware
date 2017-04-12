@@ -112,6 +112,10 @@
     "from-helpers-to-middleware/middleware/psr-15.html",
     "from-helpers-to-middleware/middleware/no-more-coupling-to-a-framework.html",
     "from-helpers-to-middleware/middleware/what-can-you-do-with-it.html",
+    {
+        "background": "slides/from-helpers-to-middleware/middleware/middleware-example-flight.png",
+        "path":       "from-helpers-to-middleware/middleware/http-middleworld.html"
+    },
 
     "outro/thanks.html"
 ]
