@@ -87,6 +87,8 @@
         "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/you-see-it-coming.jpg",
         "path":       null
     },
+    "from-helpers-to-middleware/zf2-and-decent-patterns/zf2.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/it-s-gonna-be-a-rewrite.html",
 
     "outro/thanks.html"
 ]
