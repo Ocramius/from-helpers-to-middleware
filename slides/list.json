@@ -100,6 +100,8 @@
     "from-helpers-to-middleware/zf2-and-decent-patterns/controller-2.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/controller-3.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/controller-4.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/reduced-framework-coupling.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/less-magic-equals-less-code-rot.html",
 
     "outro/thanks.html"
 ]
