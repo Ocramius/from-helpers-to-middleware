@@ -8,10 +8,10 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 
-final class NotAllowed implements MiddlewareInterface
+final class NotFound implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
     {
-        return new HtmlResponse('You are not allowed here', 403);
+        return new HtmlResponse('Not Found', 404);
     }
 }
