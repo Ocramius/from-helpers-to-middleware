@@ -108,6 +108,7 @@
 
     "from-helpers-to-middleware/middleware/introducing-middleware.html",
     "from-helpers-to-middleware/middleware/a-solid-standard.html",
+    "from-helpers-to-middleware/middleware/psr-7.html",
 
     "outro/thanks.html"
 ]
