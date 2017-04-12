@@ -104,6 +104,7 @@
     "from-helpers-to-middleware/zf2-and-decent-patterns/less-magic-equals-less-code-rot.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/we-still-type-hint-against-the-framework.html",
     "from-helpers-to-middleware/zf2-and-decent-patterns/we-are-mostly-doing-http-stuff.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/if-we-abstract-to-listeners-we-introduce-magic.html",
 
     "outro/thanks.html"
 ]
