@@ -116,6 +116,7 @@
         "background": "slides/from-helpers-to-middleware/middleware/middleware-example-flight.png",
         "path":       "from-helpers-to-middleware/middleware/http-middleworld.html"
     },
+    "from-helpers-to-middleware/middleware/orthogonal-concerns.html",
 
     "outro/thanks.html"
 ]
