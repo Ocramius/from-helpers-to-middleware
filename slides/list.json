@@ -126,6 +126,7 @@
     "from-helpers-to-middleware/middleware/ValidatePurchase.html",
     "from-helpers-to-middleware/middleware/FormValidationError.html",
     "from-helpers-to-middleware/middleware/PurchaseProduct.html",
+    "from-helpers-to-middleware/middleware/simplification-through-decomposition.html",
 
     "outro/thanks.html"
 ]
