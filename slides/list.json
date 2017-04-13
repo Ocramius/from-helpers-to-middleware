@@ -6,151 +6,136 @@
     "introduction/gandalphp-tweet.html",
     "introduction/i-am-gandalphp.html",
     "introduction/i-work-for-roave.html",
-    "introduction/i-work-on-zend-framework-2.html",
+    "introduction/i-work-on-zend-framework.html",
     "introduction/i-work-on-doctrine.html",
 
-    "extremely-defensive-php/the-talk/extremely-defensive-php.html",
-    "extremely-defensive-php/the-talk/this-talk-is-about-extremism.html",
+    "from-helpers-to-middleware/our-application/the-domain.html",
     {
-        "background": "assets/img/feature-creep.jpg",
+        "background": "slides/from-helpers-to-middleware/our-application/acme-inc.jpg",
         "path":       null
     },
-    "extremely-defensive-php/the-talk/what-is-this-talk-about.html",
-    "extremely-defensive-php/the-talk/know-your-limit.html",
-
-    "extremely-defensive-php/what-is-defensive-coding/lets-start-bold.html",
-    "extremely-defensive-php/what-is-defensive-coding/you-are-dumb.html",
-    "extremely-defensive-php/what-is-defensive-coding/no-i-do-not-mean-you.html",
-    "extremely-defensive-php/what-is-defensive-coding/i-am-dumb.html",
-    "extremely-defensive-php/what-is-defensive-coding/we-are-dumb.html",
-    "extremely-defensive-php/what-is-defensive-coding/everyone-is-dumb.html",
     {
-        "background": "assets/img/oprah-free-car.gif",
+        "background": "slides/from-helpers-to-middleware/our-application/acme-inc-services.png",
         "path":       null
     },
-    "extremely-defensive-php/what-is-defensive-coding/those-who-dont-admit-it-are-the-dumbest.html",
-    "extremely-defensive-php/what-is-defensive-coding/do-you-know-defensive-driving.html",
-    "extremely-defensive-php/what-is-defensive-coding/defensive-coding-is-similar-to-defensive-driving.html",
-    "extremely-defensive-php/what-is-defensive-coding/be-scared-by-everyones-code.html",
-    "extremely-defensive-php/what-is-defensive-coding/be-scared-by-your-code.html",
-
-    "extremely-defensive-php/poka-yoke/where-do-these-concepts-come-from.html",
-    "extremely-defensive-php/poka-yoke/clean-code.html",
-    "extremely-defensive-php/poka-yoke/effective-java.html",
-    "extremely-defensive-php/poka-yoke/poka-yoke.html",
     {
-        "background": "assets/img/rj45.jpg",
-        "path":       "extremely-defensive-php/poka-yoke/poka-yoke-rj45.html"
+        "background": "slides/from-helpers-to-middleware/our-application/coyote-roadrunner.png",
+        "path":       null
+    },
+    "from-helpers-to-middleware/our-application/services-provided.html",
+    "from-helpers-to-middleware/our-application/requirements.html",
+
+
+
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
+        "path":       null
     },
     {
-        "background": "assets/img/usb.jpg",
-        "path":       "extremely-defensive-php/poka-yoke/poka-yoke-usb-not.html"
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
+        "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/plain-php.html"
+    },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/we-did-it-anyway.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/black.png",
+        "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/warning-graphic-images.html"
+    },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-1.html",
+    "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-2.html",
+    "from-helpers-to-middleware/dark-ages-of-plain-php/purchase-code-3.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.jpg",
+        "path":       "from-helpers-to-middleware/dark-ages-of-plain-php/it-could-work.html"
+    },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/security-issues.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/security-issues-workarounds.jpg",
+        "path":       null
+    },
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/no-idea-what-we-re-doing.jpg",
+        "path":       null
+    },
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-plain-php/customer-state-after-security-issue.jpg",
+        "path":       null
+    },
+    "from-helpers-to-middleware/dark-ages-of-plain-php/let-s-get-some-frameworks-involved.html",
+
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/black.png",
+        "path":       "from-helpers-to-middleware/dark-ages-of-zf1/zf1.html"
+    },
+    "from-helpers-to-middleware/dark-ages-of-zf1/migrate-all-the-things.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/we-now-have-separation.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/mvc-ish.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/controller-example.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/controller-1.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/controller-2.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/controller-3.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/progress.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/no-more-basic-security-issues.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/security-issues-nailed.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/theoretical-testability.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/zf1-testability-in-practice.jpg",
+        "path":       null
+    },
+    "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework.html",
+    "from-helpers-to-middleware/dark-ages-of-zf1/coupling-with-the-framework-details.html",
+    {
+        "background": "slides/from-helpers-to-middleware/dark-ages-of-zf1/you-see-it-coming.jpg",
+        "path":       null
     },
 
-    "extremely-defensive-php/code-is-not-reusable/lets-make-one-thing-clear.html",
-    "extremely-defensive-php/code-is-not-reusable/code-is-reusable.html",
-    "extremely-defensive-php/code-is-not-reusable/code-is-not-reusable.html",
-    "extremely-defensive-php/code-is-not-reusable/code-is-crap.html",
-    "extremely-defensive-php/code-is-not-reusable/90-percent-of-everything-is-crap.html",
-    "extremely-defensive-php/code-is-not-reusable/abstractions-are-reusable.html",
-    "extremely-defensive-php/code-is-not-reusable/dont-write-crap.html",
-    "extremely-defensive-php/code-is-not-reusable/code-for-your-use-case-not-for-your-reuse-case.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/zf2.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/rewrite.html",
+    {
+        "background": "slides/from-helpers-to-middleware/zf2-and-decent-patterns/confused-coyote.jpg",
+        "path":       null
+    },
+    "from-helpers-to-middleware/zf2-and-decent-patterns/it-s-gonna-be-a-rewrite.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/the-controller.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/controller-1.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/controller-2.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/controller-3.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/controller-4.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/reduced-framework-coupling.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/less-magic-equals-less-code-rot.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/we-still-type-hint-against-the-framework.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/we-are-mostly-doing-http-stuff.html",
+    "from-helpers-to-middleware/zf2-and-decent-patterns/if-we-abstract-to-listeners-we-introduce-magic.html",
 
-    "extremely-defensive-php/good-practices/good-practices.html",
+    "from-helpers-to-middleware/middleware/introducing-middleware.html",
+    "from-helpers-to-middleware/middleware/a-solid-standard.html",
+    "from-helpers-to-middleware/middleware/psr-7.html",
+    "from-helpers-to-middleware/middleware/psr-15.html",
+    "from-helpers-to-middleware/middleware/no-more-coupling-to-a-framework.html",
+    "from-helpers-to-middleware/middleware/what-can-you-do-with-it.html",
+    {
+        "background": "slides/from-helpers-to-middleware/middleware/middleware-example-flight.png",
+        "path":       "from-helpers-to-middleware/middleware/http-middleworld.html"
+    },
+    "from-helpers-to-middleware/middleware/orthogonal-concerns.html",
+    "from-helpers-to-middleware/middleware/an-example-pipeline.html",
+    "from-helpers-to-middleware/middleware/an-example-pipeline-graph.html",
+    "from-helpers-to-middleware/middleware/NotFound.html",
+    "from-helpers-to-middleware/middleware/InitializeSession.html",
+    "from-helpers-to-middleware/middleware/IsCoyote.html",
+    "from-helpers-to-middleware/middleware/NotAllowed.html",
+    "from-helpers-to-middleware/middleware/ValidatePurchase.html",
+    "from-helpers-to-middleware/middleware/FormValidationError.html",
+    "from-helpers-to-middleware/middleware/PurchaseProduct.html",
+    "from-helpers-to-middleware/middleware/simplification-through-decomposition.html",
+    {
+        "background": "slides/from-helpers-to-middleware/middleware/black.png",
+        "path":       "from-helpers-to-middleware/middleware/warning-type-system-workarounds.html"
+    },
 
-    "extremely-defensive-php/good-practices/solid/assuming-solid-code.html",
-    "extremely-defensive-php/good-practices/solid/assuming-some-object-calisthenics.html",
+    "outro/thanks.html",
 
-    "extremely-defensive-php/good-practices/immutable-state/use-immutable-wherever-possible.html",
-    "extremely-defensive-php/good-practices/immutable-state/what-about-performance.html",
+    "from-helpers-to-middleware/bonus-cqrs-and-middleware/middleware-with-cqrs.html",
+    "from-helpers-to-middleware/bonus-cqrs-and-middleware/middleware-with-cqrs-graph.html"
 
-    "extremely-defensive-php/good-practices/no-setters/no-setters.html",
-    "extremely-defensive-php/good-practices/no-setters/setters-do-not-mean-anything.html",
 
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/constructor-is-your-only-injection-point.html",
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/no-un-initialized-properties.html",
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/optional-dependencies.html",
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/logger-optional-example.html",
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/there-are-no-optional-dependencies.html",
-    "extremely-defensive-php/good-practices/constructor-as-only-mutator/logger-required-example.html",
-
-    "extremely-defensive-php/good-practices/avoid-useless-public-methods/avoid-unnecessary-public-methods.html",
-    "extremely-defensive-php/good-practices/avoid-useless-public-methods/unnecessary-not-very-striclty-required.html",
-    "extremely-defensive-php/good-practices/avoid-useless-public-methods/a-public-method-is-like-a-child.html",
-
-    "extremely-defensive-php/good-practices/logic-switch-parameters/avoid-logic-switch-parameters.html",
-    "extremely-defensive-php/good-practices/logic-switch-parameters/logic-switch-mailer-example.html",
-    "extremely-defensive-php/good-practices/logic-switch-parameters/logic-switch-mailer-fixed-example.html",
-
-    "extremely-defensive-php/good-practices/encapsulation/all-state-protected-from-external-access.html",
-    "extremely-defensive-php/good-practices/encapsulation/getter-datetime-example.html",
-    "extremely-defensive-php/good-practices/encapsulation/getter-datetime-example-bug.html",
-    "extremely-defensive-php/good-practices/encapsulation/getter-datetime-example-fixed.html",
-    "extremely-defensive-php/good-practices/encapsulation/constructor-datetime-example.html",
-    "extremely-defensive-php/good-practices/encapsulation/external-access-includes-subclasses.html",
-
-    "extremely-defensive-php/good-practices/private-properties/make-state-private.html",
-    "extremely-defensive-php/good-practices/private-properties/all-properties-private-by-default.html",
-
-    "extremely-defensive-php/good-practices/a-public-method-is-a-transaction/a-public-method-is-a-transaction.html",
-    "extremely-defensive-php/good-practices/a-public-method-is-a-transaction/non-transactional-handling-example.html",
-    "extremely-defensive-php/good-practices/a-public-method-is-a-transaction/transactional-handling-example.html",
-
-    "extremely-defensive-php/good-practices/do-not-assume-method-idempotence/do-not-assume-method-idempotence.html",
-    "extremely-defensive-php/good-practices/do-not-assume-method-idempotence/method-idempotence-assumption.html",
-    "extremely-defensive-php/good-practices/do-not-assume-method-idempotence/method-idempotence-unaware.html",
-
-    "extremely-defensive-php/good-practices/assert/assert.html",
-    "extremely-defensive-php/good-practices/assert/enforce-strict-rules.html",
-    "extremely-defensive-php/good-practices/assert/train-example.html",
-    "extremely-defensive-php/good-practices/assert/beberlei-assert.html",
-
-    "extremely-defensive-php/good-practices/parameter-types/no-mixed-parameter-types.html",
-    "extremely-defensive-php/good-practices/parameter-types/mixed-parameter-types-mess-example.html",
-    "extremely-defensive-php/good-practices/parameter-types/mixed-parameter-types-fixed-example.html",
-    "extremely-defensive-php/good-practices/parameter-types/value-objects-ftw.html",
-    "extremely-defensive-php/good-practices/parameter-types/value-objects-ensure-consistency.html",
-    "extremely-defensive-php/good-practices/parameter-types/value-objects-simplify-data-validation.html",
-
-    "extremely-defensive-php/good-practices/return-types/no-mixed-return-types.html",
-    "extremely-defensive-php/good-practices/return-types/value-objects-ftw.html",
-
-    "extremely-defensive-php/good-practices/no-fluent-interfaces/avoid-fluent-interfaces.html",
-    "extremely-defensive-php/good-practices/no-fluent-interfaces/fluent-interface-usages-example.html",
-    "extremely-defensive-php/good-practices/no-fluent-interfaces/poka-yoke.html",
-    "extremely-defensive-php/good-practices/no-fluent-interfaces/fluent-interface-usages-fixed-example.html",
-    "extremely-defensive-php/good-practices/no-fluent-interfaces/blog-post-reference.html",
-
-    "extremely-defensive-php/good-practices/final-classes/final-by-default.html",
-    "extremely-defensive-php/good-practices/final-classes/an-extension-is-a-different-use-case.html",
-    "extremely-defensive-php/good-practices/final-classes/does-extending-the-interface-add-meaning.html",
-    "extremely-defensive-php/good-practices/final-classes/blog-post-reference.html",
-
-    "extremely-defensive-php/good-practices/traits/traits.html",
-    "extremely-defensive-php/good-practices/traits/no-traits.html",
-
-    "extremely-defensive-php/good-practices/deep-cloning/ensure-deep-cloning.html",
-    "extremely-defensive-php/good-practices/deep-cloning/deep-cloning-example.html",
-    "extremely-defensive-php/good-practices/deep-cloning/cloning-requires-encapsulated-state-understanding.html",
-    "extremely-defensive-php/good-practices/deep-cloning/so.html",
-    "extremely-defensive-php/good-practices/deep-cloning/disable-cloning.html",
-    "extremely-defensive-php/good-practices/deep-cloning/disable-cloning-example.html",
-
-    "extremely-defensive-php/good-practices/serializable/same-for-serialization.html",
-    "extremely-defensive-php/good-practices/serializable/is-it-really-serializable.html",
-    "extremely-defensive-php/good-practices/serializable/disable-serialization.html",
-    "extremely-defensive-php/good-practices/serializable/serialize-only-if-serializable.html",
-
-    "extremely-defensive-php/good-practices/testing/testing.html",
-    "extremely-defensive-php/good-practices/testing/test-all-scenarios.html",
-    "extremely-defensive-php/good-practices/testing/test-all-scenarios-example.html",
-    "extremely-defensive-php/good-practices/testing/test-all-scenarios-example-cases.html",
-
-    "extremely-defensive-php/recap/recap.html",
-    "extremely-defensive-php/recap/these-rules-are-inspirational.html",
-    "extremely-defensive-php/recap/trust-no-code.html",
-    "extremely-defensive-php/recap/reduce-features-to-the-minimum.html",
-    "extremely-defensive-php/recap/await-strict-return-strict.html",
-
-    "outro/thanks.html"
 ]

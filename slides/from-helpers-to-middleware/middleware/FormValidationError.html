@@ -1,0 +1,22 @@
+<pre><code data-trim>
+final class FormValidationError implements MiddlewareInterface
+{
+    private $renderer;
+
+    public function __construct(Renderer $renderer)
+    {
+        $this->renderer = $renderer;
+    }
+
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse(
+            $this->renderer->render(
+                'validation-error',
+                ['result' => $request->getAttribute('validationResult')]
+            ),
+            422
+        );
+    }
+}
+</code></pre>

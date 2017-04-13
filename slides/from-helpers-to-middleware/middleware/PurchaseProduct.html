@@ -1,0 +1,23 @@
+<pre><code data-trim>
+final class PurchaseProduct implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        $this->getProduct->get(
+            $request->getAttribute('validationResult')->get('product')
+        );
+
+        $product->purchase(); // still magic - not for this talk
+
+        $this->notifications->notify(
+            $request->getAttribute('session')['user'],
+            'Purchase completed'
+        );
+
+        return new HtmlResponse($this->renderer->render(
+            'product-purchased',
+            ['product' => $product]
+        ));
+    }
+}
+</code></pre>

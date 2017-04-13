@@ -1,0 +1,10 @@
+<pre><code data-trim>
+&lt;?php
+
+include 'functions.php.inc';
+
+// register_globals polyfill
+foreach ($_REQUEST as $var => $value) {
+    $$var = $value;
+}
+</code></pre>

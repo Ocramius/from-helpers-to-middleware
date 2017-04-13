@@ -1,0 +1,20 @@
+<pre><code data-trim>
+final class ValidatePurchase implements MiddlewareInterface
+{
+  // ...
+  public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+  {
+    $validationResult = $this->form->validate($request);
+    $request = $request->withAttribute(
+      'validationResult',
+      $validationResult
+    );
+
+    if (! $validationResult->isValid()) {
+      return $this->validationError->process($request, $delegate);
+    }
+
+    return $delegate->process($request, $delegate);
+  }
+}
+</code></pre>

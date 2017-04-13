@@ -1,0 +1,11 @@
+<pre><code data-trim>
+
+$data = $form->getData();
+
+$product = $this->loadProduct($data['product']);
+$product->purchase(); // magic
+
+$this->mail($this->user(), 'Purchase completed');
+
+return $this->render(['success' => true]);
+</code></pre>

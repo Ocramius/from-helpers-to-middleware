@@ -1,0 +1,20 @@
+<pre><code data-trim>
+public function __construct(
+    IsCoyote $isCoyote,
+    NotAllowed $notAllowed,
+    PurchaseForm $form,
+    GetProduct $getProduct,
+    CurrentUser $currentUser,
+    Notifications $notifications
+) {
+    $this->isCoyote = $isCoyote;
+    $this->notAllowed = $notAllowed;
+    $this->form = $form;
+    $this->getProduct = $getProduct;
+    $this->currentUser = $currentUser;
+    $this->notifications = $notifications;
+}
+</code></pre>
+
+<p class="fragment">Constructor injection!</p>
+<p class="fragment">NO HORRIBLE MAGIC SINGLETON LOOPS!</p>

@@ -1,0 +1,18 @@
+<pre><code data-trim>
+final class IsCoyote implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        if (! $this->isCoyote($request)) {
+            return $this->notAllowed->process($request, $delegate);
+        }
+
+        return $delegate->process($request);
+    }
+
+    private function isCoyote(ServerRequestInterface $request) : bool
+    {
+        // ...
+    }
+}
+</code></pre>

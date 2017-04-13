@@ -1,0 +1,9 @@
+digraph App {
+    Routing -> NotFound
+    Routing -> InitializeSession
+    InitializeSession -> IsCoyote
+    IsCoyote -> NotAllowed
+    IsCoyote -> ValidatePurchase
+    ValidatePurchase -> FormValidationError
+    ValidatePurchase -> PurchaseProduct
+}

@@ -1,0 +1,28 @@
+<h3>
+    <span class="zf-color">PSR-15</span>
+</h3>
+
+<pre class="fragment"><code data-trim>
+namespace Psr\Http\ServerMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+
+interface MiddlewareInterface {
+    public function process(
+        ServerRequestInterface $request,
+        DelegateInterface $delegate
+    ) : ResponseInterface;
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+namespace Psr\Http\ServerMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
+
+interface DelegateInterface {
+    public function process(
+        ServerRequestInterface $request
+    ) : ResponseInterface;
+}
+</code></pre>

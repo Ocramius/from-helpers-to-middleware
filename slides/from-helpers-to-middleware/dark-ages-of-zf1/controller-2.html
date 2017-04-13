@@ -1,0 +1,11 @@
+<pre><code data-trim>
+if (! $this->isCoyote()) {
+    return $this->notAllowed();
+}
+
+$form = new PurchaseForm();
+
+if (! $form->isValid($this->getPost())) {
+    return $this->render(['form' => $form]);
+}
+</code></pre>

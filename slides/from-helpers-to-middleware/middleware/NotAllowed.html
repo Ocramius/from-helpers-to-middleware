@@ -1,0 +1,9 @@
+<pre><code data-trim>
+final class NotAllowed implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate) : ResponseInterface
+    {
+        return new HtmlResponse('You are not allowed here', 403);
+    }
+}
+</code></pre>
