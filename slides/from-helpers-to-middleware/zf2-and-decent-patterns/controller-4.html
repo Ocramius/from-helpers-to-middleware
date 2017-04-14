@@ -1,15 +1,16 @@
 <pre><code data-trim>
-$data = $this->form->getData();
+    $data = $this->form->getData();
 
-$product = $this->getProduct->get($data['product']);
-$product->purchase(); // magic
+    $product = $this->getProduct->get($data['product']);
+    $product->purchase(); // magic
 
-$this->notifications->notify(
-    $this->currentUser->get($request),
-    'Purchase completed'
-);
+    $this->notifications->notify(
+        $this->currentUser->get($request),
+        'Purchase completed'
+    );
 
-return ['success' => true];
+    return ['success' => true];
+}
 </code></pre>
 
 <p class="fragment">Still some magic in the domain - let's skip that for now</p>
